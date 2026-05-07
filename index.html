@@ -1,0 +1,202 @@
+Вот готовый сайт-приглашение с именами **Савелий и Анна** и без формы подтверждения. Убрана вся механика RSVP, навигация, кнопка и соответствующие скрипты. Вместо кнопки подтверждения добавлена удобная кнопка «Как нас найти», ведущая к карте и локации.
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Савелий & Анна | Свадебное приглашение</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <Link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style adaptiv.css">
+  
+</head>
+<body>
+  <link rel="stylesheet" href="">
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">С & А</div>
+      <ul class="nav-links">
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#couple">О нас</a></li>
+        <li><a href="#event">Событие</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#location">Локация</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero section -->
+    <section id="home" class="hero">
+      <div class="hero-content fade-up">
+        <div class="hero-sub">С любовью приглашаем</div>
+        <h1 class="hero-name">Савелий & Анна</h1>
+        <div class="hero-date">15 августа 2026 · 16:00</div>
+        <a href="#location" class="btn">Как нас найти <i class="fas fa-map-marker-alt"></i></a>
+      </div>
+    </section>
+
+    <!-- Couple / Story -->
+    <section id="couple">
+      <div class="container">
+        <h2 class="section-title fade-up">Наша история</h2>
+        <div class="couple-grid">
+          <div class="couple-card fade-up">
+            <img src="picture/photo_2026-05-07_19-53-51.jpg" alt="Савелий">
+            <h3>Савелий</h3>
+            <p>Любовь - вещь такая: не знаешь, где ее встретишь. Один вечер все поменял...</p>
+          </div>
+          <div class="couple-card fade-up">
+            <img src="picture/photo_2026-05-07_20-02-10.jpg" alt="Анна">
+            <h3>Анна</h3>
+            <p>Кто же знал, что простая вечеринка приведет нас к свадьбе?<br> Хочу хихикать с ним до старости.</p>
+          </div>
+        </div>
+        <div class="couple-card fade-up" style="max-width: 700px; margin: 30px auto 0; background: #fff6f0;">
+          <p style="font-size: 1.1rem;">✨ Мы трижды познакомились. На третьем первом знакомстве мы поняли что это оно &#128150. Уже 4 года мы видимся каждый день и хотем еще 60✨</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event details + program -->
+    <section id="event" style="padding-top: 0;">
+      <div class="container">
+        <h2 class="section-title fade-up">Детали торжества</h2>
+        <div class="info-grid">
+          <div class="info-card fade-up">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Дата и время</h3>
+            <p>8 августа 2026, суббота<br>Сбор гостей: 13:30<br>Церемония: 14:00</p>
+          </div>
+          <div class="info-card fade-up">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Место</h3>
+            <p>ДК Солдатова<br>Пермь, Комсомольский просп., 79</p>
+          </div>
+          <div class="info-card fade-up">
+            <i class="fas fa-glass-cheers"></i>
+            <h3>Программа </h3>
+            <p>💍 14:00 Торжественная церемония<br>🍾  15:00 Фуршет<br></p>
+          </div>
+          <div class="info-card fade-up">
+            <i class="fas fa-tshirt"></i>
+            <h3>Дресс-код</h3>
+            <p>Elegant / Semi-formal<br>Приветствуются полуформальный дресс-код.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <div class="container timer-section fade-up" style="margin-bottom: 20px;">
+      <div style="padding: 40px 20px; text-align: center;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 30px;">⌛ До нашей свадьбы осталось</h3>
+        <div class="timer-wrapper" id="countdown">
+          <div class="timer-box"><div class="timer-number" id="days">00</div><div class="timer-label">Дней</div></div>
+          <div class="timer-box"><div class="timer-number" id="hours">00</div><div class="timer-label">Часов</div></div>
+          <div class="timer-box"><div class="timer-number" id="minutes">00</div><div class="timer-label">Минут</div></div>
+          <div class="timer-box"><div class="timer-number" id="seconds">00</div><div class="timer-label">Секунд</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title fade-up">Фотографии моментов</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item fade-up"><img src="picture/8xlvkubAUxRDc3bMGztMMMmcnxc18apc4ZAWvSyZQrADj3OjOq9X79NKHgNJbP1lo3Qk5d4-hp5UJjfWIcPzpJ5d.jpg" alt="Свадебные цветы"></div>
+          <div class="gallery-item fade-up"><img src="picture/b2foH5iToQsR8lWdQZ7BhC2VHjCN-FFNnNGi09JbYx6GP16Qhdy1wr4fXTMh4KliVhVmJ1zE4am1xBtnTbevUFxo.jpg" alt="Обручальные кольца"></div>
+          <div class="gallery-item fade-up"><img src="picture/EBA8do64MdcHCyi_bV_ceWy8bRx244rj9tMdR2i77aWT9DR5rhvuujPVfmX7OdMo83QgYF9TSQClVAn1ouv3WcWj.jpg" alt="Свадебный торт"></div>
+          <div class="gallery-item fade-up"><img src="picture/MNbrJm-OIy2tcJEkrOMA7lrgUPGXh6T_Krx_msXkNang0n3ceLL5iV5YlmsQvaqLGINRP50e_pv1pwcV-o_RAmvu.jpg" alt="Банкетный зал"></div>
+        </div>
+      
+      </div>
+    </section>
+
+    <!-- Location Map (без формы RSVP) -->
+    <section id="location">
+      <div class="container">
+        <h2 class="section-title fade-up">Как нас найти</h2>
+        <div class="info-card fade-up" style="text-align: center; margin-bottom: 24px;">
+          <i class="fas fa-location-dot"></i>
+          <p><strong>ДК Солдатова</strong><br>г. Пермь, Комсомольский проспект, 79<br>Остановка общественного транспорта «Комсомольский проспект» (автобусы, трамваи)</p>
+        </div>
+        <div class="map-container fade-up">
+          <!-- Google Maps embed с точным адресом Пермь, Комсомольский просп., 79 -->
+          <iframe src="https://www.google.com/maps?q=Пермь,+Комсомольский+просп.,+79&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="fade-up" style="text-align: center; margin-top: 20px;">🚗 Для гостей на авто: оборудованная парковка у комплекса. </p>
+        <p class="fade-up" style="text-align: center; margin-top: 10px;">📍 Точный адрес: <a href="https://maps.google.com/?q=Пермь,+Комсомольский+просп.,+79" target="_blank" style="color:#c28a5c;">Комсомольский проспект, 79, Пермь</a> — открыть в навигаторе</p>
+      </div>
+    </section>
+  </main>
+  </main>
+
+  <footer>
+    <p>С нетерпением ждём вас в этот важный день! ❤️</p>
+    <p>Савелий & Анна <i class="fas fa-heart footer-heart"></i> 15.08.2026</p>
+    <p style="margin-top: 14px; font-size: 0.75rem;">Если у вас есть вопросы, свяжитесь с нами: <i class="fas fa-phone-alt"></i> +7 (999) 123-45-67</p>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    function updateCountdown() {
+      const weddingDate = new Date(2026, 7, 15, 16, 0, 0); // 15 августа 2026, 16:00
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (86400000)) / (3600000));
+      const minutes = Math.floor((diff % 3600000) / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+
+      document.getElementById('days').innerText = days < 10 ? '0' + days : days;
+      document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Fade-up on scroll (Intersection Observer)
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Smooth navigation for anchor links (без RSVP)
+    document.querySelectorAll('.nav-links a, .hero-content .btn').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        if (hash && hash.startsWith('#')) {
+          e.preventDefault();
+          const targetId = hash.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+```
