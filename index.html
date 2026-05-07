@@ -1,5 +1,3 @@
-Вот готовый сайт-приглашение с именами **Савелий и Анна** и без формы подтверждения. Убрана вся механика RSVP, навигация, кнопка и соответствующие скрипты. Вместо кнопки подтверждения добавлена удобная кнопка «Как нас найти», ведущая к карте и локации.
-```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -27,9 +25,7 @@
       </ul>
     </div>
   </nav>
-
   <main>
-    <!-- Hero section -->
     <section id="home" class="hero">
       <div class="hero-content fade-up">
         <div class="hero-sub">С любовью приглашаем</div>
@@ -38,8 +34,6 @@
         <a href="#location" class="btn">Как нас найти <i class="fas fa-map-marker-alt"></i></a>
       </div>
     </section>
-
-    <!-- Couple / Story -->
     <section id="couple">
       <div class="container">
         <h2 class="section-title fade-up">Наша история</h2>
@@ -60,8 +54,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Event details + program -->
     <section id="event" style="padding-top: 0;">
       <div class="container">
         <h2 class="section-title fade-up">Детали торжества</h2>
@@ -89,8 +81,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Countdown Timer -->
     <div class="container timer-section fade-up" style="margin-bottom: 20px;">
       <div style="padding: 40px 20px; text-align: center;">
         <h3 style="font-size: 1.8rem; margin-bottom: 30px;">⌛ До нашей свадьбы осталось</h3>
@@ -102,8 +92,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Gallery -->
     <section id="gallery">
       <div class="container">
         <h2 class="section-title fade-up">Фотографии моментов</h2>
@@ -116,8 +104,6 @@
       
       </div>
     </section>
-
-    <!-- Location Map (без формы RSVP) -->
     <section id="location">
       <div class="container">
         <h2 class="section-title fade-up">Как нас найти</h2>
@@ -126,7 +112,6 @@
           <p><strong>ДК Солдатова</strong><br>г. Пермь, Комсомольский проспект, 79<br>Остановка общественного транспорта «Комсомольский проспект» (автобусы, трамваи)</p>
         </div>
         <div class="map-container fade-up">
-          <!-- Google Maps embed с точным адресом Пермь, Комсомольский просп., 79 -->
           <iframe src="https://www.google.com/maps?q=Пермь,+Комсомольский+просп.,+79&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <p class="fade-up" style="text-align: center; margin-top: 20px;">🚗 Для гостей на авто: оборудованная парковка у комплекса. </p>
@@ -143,7 +128,6 @@
   </footer>
 
   <script>
-    // Countdown Timer
     function updateCountdown() {
       const weddingDate = new Date(2026, 7, 15, 16, 0, 0); // 15 августа 2026, 16:00
       const now = new Date();
@@ -169,8 +153,6 @@
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    // Fade-up on scroll (Intersection Observer)
     const fadeElements = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -181,8 +163,6 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
     fadeElements.forEach(el => observer.observe(el));
-
-    // Smooth navigation for anchor links (без RSVP)
     document.querySelectorAll('.nav-links a, .hero-content .btn').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const hash = this.getAttribute('href');
